@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="boot-05-web-admin-02" />
+        <module name="atguigu-hello-spring-boot-starter-autoconfigure" />
+        <module name="boot-01-helloworld2" />
+        <module name="boot-05-web-01" />
+        <module name="boot-05-adminserver" />
+        <module name="boot-01-helloworld" />
+        <module name="boot-09-hello-test" />
+        <module name="boot-09-features-profile" />
+        <module name="atguigu-hello-spring-boot-starter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="atguigu-hello-spring-boot-starter" target="1.8" />
+      <module name="atguigu-hello-spring-boot-starter-autoconfigure" target="1.8" />
+      <module name="boot-01-helloworld" target="1.8" />
+      <module name="boot-01-helloworld2" target="1.8" />
+      <module name="boot-05-adminserver" target="1.8" />
+      <module name="boot-05-web-01" target="1.8" />
+      <module name="boot-05-web-admin-02" target="1.8" />
+      <module name="boot-09-features-profile" target="1.8" />
+      <module name="boot-09-hello-test" target="1.8" />
+      <module name="demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="atguigu-hello-spring-boot-starter-autoconfigure" options="-parameters" />
+      <module name="boot-01-helloworld" options="-parameters" />
+      <module name="boot-01-helloworld2" options="-parameters" />
+      <module name="boot-05-adminserver" options="-parameters" />
+      <module name="boot-05-web-01" options="-parameters" />
+      <module name="boot-05-web-admin-02" options="-parameters" />
+      <module name="boot-09-features-profile" options="-parameters" />
+      <module name="boot-09-hello-test" options="-parameters" />
+      <module name="demo" options="-parameters" />
+    </option>
+  </component>
+</project>

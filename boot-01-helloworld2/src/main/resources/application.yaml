@@ -1,0 +1,27 @@
+person:
+  #userName: 张三
+  user-name: 李四
+  boss: true
+  birth: 2021/8/15
+  age: 18
+  pet:
+    name: tomcat
+    weight: 199.99
+  interests: [篮球,足球,排球,乒乓球]
+  animal:
+    - make
+    - lucy
+  score:
+    english:
+      first: 30
+      second: 40
+      third: 50
+    math: {first:30,second:40,third:50}
+    chinese: {100,110,120}
+  salarys: [1000,20000,9999.99]
+  allPets:
+    sick:
+      - {name: tom}
+      - {weight: 18.88}
+    health: [{name: mario,weight: 47.77}]
+

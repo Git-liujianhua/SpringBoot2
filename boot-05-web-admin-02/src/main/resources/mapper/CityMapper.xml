@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.atguigu.admin.mapper.CityMapper">
+<!--    public City getCity(Integer id);-->
+<!--    <select id="getCity" resultType="com.atguigu.admin.bean.City">-->
+<!--        select * from city where id = #{id}-->
+<!--    </select>-->
+
+<!--    <insert id="insert" useGeneratedKeys="true" keyProperty="id">-->
+<!--        insert into City('name','countryCode','district','population') values (#{name},#{countryCode},#{district},#{population})-->
+<!--    </insert>-->
+</mapper>

@@ -1,0 +1,4 @@
+server:
+  port: 8999
+person:
+  name: test-张三

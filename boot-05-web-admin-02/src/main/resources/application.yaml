@@ -1,0 +1,90 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_account
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    druid:
+      aop-patterns: com.atguigu.admin.*     #监控SpringBean
+      filters: stat,wall    #底层开启功能,stat(sql监控),wall(防火墙)
+      filter:     #对filters里面的stat的详细配置
+        stat:     #对stat(sql监控的详细配置)
+          enabled: true
+          log-slow-sql: true
+          slow-sql-millis: 1000
+        wall:     #对wall(防火墙的详细配置)
+          enabled: true
+          config:
+            drop-table-allow: false
+      stat-view-servlet:    #配置监控页功能
+        enabled: true
+        login-username: admin
+        login-password: admin
+        reset-enable: false
+        allow:
+      web-stat-filter:      #监控web
+        enabled: true
+        url-pattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+  redis:
+    host: 192.168.174.188
+    port: 6379
+    client-type: jedis
+    lettuce:
+      pool:
+        max-idle: 10
+        max-active: 10
+  #    lettuce:
+#      pool:
+#        max-active: 10
+#        max-idle: 10
+#        min-idle: 5
+  #    url: redis://user:password@192.168.174.188:6379
+  #    url: jdbc:sqlserver://localhost:1433;DatabaseName=ecology
+#    username: sa
+#    password: 1234
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jdbc:
+    template:
+      query-timeout: 3
+  boot:
+    admin:
+      client:
+        url: http://localhost:8888
+        instance:
+          prefer-ip: true   #使用ip注册进来
+  application:
+    name: boot-05-web-admin-02
+
+#    type: com.zaxxer.hikari.HikariDataSource
+
+mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+#management  是所有actuator的配置
+#management.endpoint.端点名.xxx  对某个端点的具体配置
+management:
+  endpoints:
+    enabled-by-default: true  #默认开启所有监控端点
+    web:
+      exposure:
+        include: '*' #以web方式暴露所有端点
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+    info:
+      enabled: true
+    beans:
+      enabled: true
+    metrics:
+      enabled: true
+info:
+  appName: admin-SpringBoot
+  appVersion: 1.0.0
+  mavenProjectName: @project.artifactId@
+  mavenProjectVersion: @project.version@

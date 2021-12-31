@@ -1,0 +1,4 @@
+server:
+  port: 9999
+person:
+  name: ljh-张三
